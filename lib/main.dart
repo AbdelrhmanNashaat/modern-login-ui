@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_page_ui/component/button.dart';
 import 'package:login_page_ui/component/square_title.dart';
 
-import 'component/TextFiled.dart';
+import 'component/text_filed.dart';
 
 void main() {
   runApp(LoginUi());
@@ -23,9 +23,7 @@ class LoginUi extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              const Spacer(
-                flex: 2,
-              ),
+              const Spacer(flex: 2),
               const Icon(
                 Icons.lock,
                 size: 140,
@@ -43,7 +41,7 @@ class LoginUi extends StatelessWidget {
               const Spacer(
                 flex: 1,
               ),
-              textField(
+              CustomTextField(
                 controller: userNameController,
                 hintText: 'User Name',
                 obscureText: false,
@@ -56,7 +54,7 @@ class LoginUi extends StatelessWidget {
               const Spacer(
                 flex: 1,
               ),
-              textField(
+              CustomTextField(
                 controller: passwordController,
                 hintText: 'Password',
                 obscureText: true,
@@ -87,7 +85,7 @@ class LoginUi extends StatelessWidget {
               const Spacer(
                 flex: 1,
               ),
-              const button(),
+              const CustomButton(),
               const Spacer(
                 flex: 1,
               ),
@@ -119,9 +117,9 @@ class LoginUi extends StatelessWidget {
               const Spacer(
                 flex: 1,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   SquareTitle(imagePath: 'assets/google.png'),
                   SizedBox(
                     width: 20,

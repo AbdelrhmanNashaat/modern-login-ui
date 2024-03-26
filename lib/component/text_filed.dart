@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class textField extends StatelessWidget {
-  final controller;
+class CustomTextField extends StatelessWidget {
+  final TextEditingController controller;
   final String hintText;
   final bool obscureText;
   final Icon icon;
-  const textField({
+  const CustomTextField({
+    super.key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
